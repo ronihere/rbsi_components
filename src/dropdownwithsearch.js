@@ -12,7 +12,7 @@ const DropDownWithSearch = ({ options, selected, onSelectComponent }) => {
   }
   const searchList = (str) => {
     const searchedList = options.filter((ele) => {
-      return ele.description?.toLowerCase().includes(str.toLowerCase());
+      return ele.name?.toLowerCase().includes(str.toLowerCase());
     })
     // console.log(searchedList)
     setDemoList(searchedList);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import options from "./utils";
+import {options} from "./utils";
 import DropDownWithSearch from "./dropdownwithsearch";
+import CheckBoxDropDownWithSearch from "./checkboxDropdownWithSearch";
 
 const ParentComponent = () => {
   const [selectedData, setSelectedData] = useState(options[0]);
@@ -9,14 +10,21 @@ const ParentComponent = () => {
   }, [selectedData]);
   const handleSelected = (data) => {
     setSelectedData(data);
-    console.log(":::FROM PAPA COMPONENT, THE DATA RECEIVED IS:::", data);
+    console.log(":::THE DATA RECEIVED from DropDownWithSearch:::", data);
   };
+
+  const handleDataRecieved = (data) => {
+    console.log('Data Recieved from CheckBoxDropDownWithSearch:::', data);
+  }
   return (
-    <DropDownWithSearch
+    <>
+    {/* <DropDownWithSearch
       options={options}
       onSelectComponent={handleSelected}
       selected={selectedData}
-    />
+    /> */}
+      <CheckBoxDropDownWithSearch list={options} onDataSend={handleDataRecieved} />
+      </>
   );
 };
 export default ParentComponent;
