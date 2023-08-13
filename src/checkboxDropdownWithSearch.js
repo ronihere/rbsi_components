@@ -35,7 +35,11 @@ const CheckBoxDropDownWithSearch = ({ list, onDataSend }) => {
                                })
                             }{
                                 selectedObjects.size > 2 ?
-                                    <p>...{selectedObjects.size - 2} Others</p>
+                                    <div className="relative group">...{selectedObjects.size - 2} Others
+                                        <div className="absolute hidden top-0 left-32 w-fit whitespace-nowrap text-gray-50 opacity-0 bg-gray-500 group-hover:opacity-100 group-hover:block">
+                                            {Array.from(selectedObjects.values()).slice(2).join(', ')}
+                                        </div>
+                                    </div>
                                     :
                                     null
                                     

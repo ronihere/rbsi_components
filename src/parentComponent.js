@@ -14,6 +14,7 @@ const ParentComponent = () => {
   };
 
   const handleDataRecieved = (data) => {
+    // alert(JSON.stringify(data))
     console.log('Data Recieved from CheckBoxDropDownWithSearch:::', data);
   }
   return (
