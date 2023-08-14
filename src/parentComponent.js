@@ -6,7 +6,6 @@ import CheckBoxDropDownWithSearch from "./checkboxDropdownWithSearch";
 const ParentComponent = () => {
   const [selectedData, setSelectedData] = useState(options[0]);
   useEffect(() => {
-    // console.log(':::FROM PAPA COMPONENET USEEFFECT__> selectedData', selectedData);
   }, [selectedData]);
   const handleSelected = (data) => {
     setSelectedData(data);
@@ -14,7 +13,7 @@ const ParentComponent = () => {
   };
 
   const handleDataRecieved = (data) => {
-    // alert(JSON.stringify(data))
+    alert(JSON.stringify(data));
     console.log('Data Recieved from CheckBoxDropDownWithSearch:::', data);
   }
   return (
