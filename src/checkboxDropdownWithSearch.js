@@ -94,7 +94,7 @@ const CheckBoxDropDownWithSearch = ({ list, onDataSend }) => {
                 })}
             </div>
             <div className="flex items-center justify-between px-2 bg-white-300 border border-solid border-gray-400 p-1">
-                <p>{selectedObjects.size }/{copiedList.length} selected</p>
+                <p>{copiedList.length} results</p>
                 <div >
                     <button className="py-2 px-2 m-1 rounded-md bg-pink-500" onClick={()=>resetSelection()}>Reset</button>
                     <button className="py-2 px-2 m-1 rounded-md bg-pink-500"onClick={()=>dispatchToParent()}>Apply</button>
