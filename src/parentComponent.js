@@ -23,7 +23,7 @@ const ParentComponent = () => {
       onSelectComponent={handleSelected}
       selected={selectedData}
     /> */}
-      <CheckBoxDropDownWithSearch list={options} onDataSend={handleDataRecieved} />
+      <CheckBoxDropDownWithSearch list={options.slice(10)} onDataSend={handleDataRecieved} />
       </>
   );
 };
